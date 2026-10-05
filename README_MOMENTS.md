@@ -27,4 +27,3 @@ python main_AlCla.py NAME 0.0 0.0
 
 The two numbers set the regularization strength and K suppression. The zero-margin loss is `max(0,-h)` for classical states and `max(0,h)` for nonclassical states. At `h=0`, the loss is zero for both classes, so accuracy and the sign of `h` should also be checked. The moments are neither normally ordered nor `g`-normalized.
 
-The dataset builder is not included in this package. No additional dataset filters or changes to the measurement data have been added.
