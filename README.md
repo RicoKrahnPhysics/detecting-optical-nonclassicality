@@ -1,4 +1,3 @@
-
 # Detecting Optical Nonclassicality from Quantum Sampler Data
 
 Code accompanying the Bachelor's thesis  
@@ -32,6 +31,16 @@ by Martina Jung et al.:
 - Original implementation:  
   [MartinaJung/IdentifyingOpticalNonclassicality](https://github.com/MartinaJung/IdentifyingOpticalNonclassicality)
 
-This adaptation is merely an application of M. Jung's model. 
+This thesis applies Jung et al.'s model to experimental photon-count data.
+The main changes are:
 
-However some code changes were made.
+- Martina's encoder already uses photon-number moments. Here they are computed
+  directly from histogram counts instead of shot-level inputs. Training uses a
+  zero-margin loss, and the polynomial skeleton builds only the terms needed.
+- Separate interpolation and extrapolation builders turn the raw TXT files into
+  train and test HDF5 datasets. They combine ten accepted 0.1 s files per bin,
+  then skip five accepted files before the next bin. The 0.5 s gap is nominal
+  when raw files are missing. Oversampling is applied only to training data.
+- Complete acquisition periods from the training file are held out for
+  validation. The best validation checkpoint is selected before the test file
+  is evaluated.
