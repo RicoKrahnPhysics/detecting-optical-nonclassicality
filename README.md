@@ -34,4 +34,4 @@ by Martina Jung et al.:
 
 This adaptation is merely an application of M. Jung's model. 
 
-However some code changes were made:
+However some code changes were made.
