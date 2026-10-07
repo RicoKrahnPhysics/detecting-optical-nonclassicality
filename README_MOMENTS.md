@@ -1,6 +1,6 @@
 # Moments classifier
 
-Based on Martina's `IdentifyingOpticalNonclassicality` repository. The original
+Based on M. Jung's `IdentifyingOpticalNonclassicality` repository. The original
 classifier files keep their layout. `moment_features.py` calculates raw photon
 number moments; `raw_dataset.py` is shared by the two dataset scripts.
 
